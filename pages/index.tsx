@@ -3,7 +3,7 @@ import Head from 'next/head';
 import { useState } from 'react';
 
 const Home = () => {
-  const [title, setTitle] = useState('Home');
+  const [title, setTitle] = useState<string>('Home');
   return (
     <>
       <Head>
@@ -12,12 +12,12 @@ const Home = () => {
       </Head>
       <ul>
         <li>
-          <Link href="/">
+          <Link href='/'>
             <a>Home</a>
           </Link>
         </li>
         <li>
-          <Link href="/about">
+          <Link href='/about'>
             <a>About Us</a>
           </Link>
         </li>
