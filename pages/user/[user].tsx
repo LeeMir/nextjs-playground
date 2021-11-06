@@ -5,7 +5,11 @@ const User = () => {
 
   const { user } = router.query;
 
-  return <h3>Hello, {user}!</h3>;
+  return (
+    <>
+      <h3>Hello, {user}!</h3>
+    </>
+  );
 }
 
 export default User;
