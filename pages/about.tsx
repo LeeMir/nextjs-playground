@@ -10,6 +10,6 @@ const About = () => {
       <div>This is nextjs tutorial</div>
     </>
   );
-}
+};
 
 export default About;

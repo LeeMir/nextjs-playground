@@ -5,14 +5,14 @@ type Data = Array<{
   name: string;
 }>;
 
-const handler = (req:NextApiRequest, res:NextApiResponse<Data>) => {
-  const data:Data = [
+const handler = (req: NextApiRequest, res: NextApiResponse<Data>) => {
+  const data: Data = [
     { name: 'John Doe' },
     { name: 'Lee Mir' },
     { name: 'Kim Sally' },
-    { name: 'Kim Ariel' }
-  ]
+    { name: 'Kim Ariel' },
+  ];
   res.status(200).json(data);
-}
+};
 
 export default handler;

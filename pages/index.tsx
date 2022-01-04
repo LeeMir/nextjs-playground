@@ -28,7 +28,7 @@ const Home = () => {
         </li>
       </ul>
     </>
-  )
-}
+  );
+};
 
 export default Home;

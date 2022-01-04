@@ -10,6 +10,6 @@ const User = () => {
       <h3>Hello, {user}!</h3>
     </>
   );
-}
+};
 
 export default User;

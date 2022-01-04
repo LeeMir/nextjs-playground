@@ -3,7 +3,7 @@ import Head from 'next/head';
 import { GetStaticProps } from 'next';
 import styled, { css } from 'styled-components';
 
-type Info = {name: string};
+type Info = { name: string };
 type DataList = Array<Info>;
 
 const LI = styled.li`
@@ -18,7 +18,7 @@ const flexCenter = css`
   height: 100vh;
 `;
 
-const List = ({ list }:{ list: DataList }) => {
+const List = ({ list }: { list: DataList }) => {
   return (
     <>
       <Head>
@@ -26,25 +26,23 @@ const List = ({ list }:{ list: DataList }) => {
       </Head>
       <div css={flexCenter}>
         <ul>
-          {
-            list.map((elem:Info) => {
-              return <LI key={elem.name}>name: {elem.name}</LI>
-            })
-          }
+          {list.map((elem: Info) => {
+            return <LI key={elem.name}>name: {elem.name}</LI>;
+          })}
         </ul>
       </div>
     </>
   );
-}
+};
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const res = await fetch('http://localhost:3000/api/data');
   const list = await res.json();
   return {
     props: {
-      list
-    }
+      list,
+    },
   };
-}
+};
 
 export default List;
